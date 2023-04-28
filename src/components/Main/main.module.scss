@@ -1,9 +1,13 @@
 .main {
+  position: relative;
+  z-index: 5;
+
   display: flex;
   justify-content: space-between;
 
   margin-top: 5.625rem;
   margin-bottom: 7.75rem;
+  padding: 0 14px;
 
   .header {
     h1 {
@@ -112,10 +116,10 @@
 
 @media (max-width: 770px) {
   .main {
-    justify-content: left;
+    justify-content: center;
     flex-direction: column;
+    align-items: flex-start;
 
-    margin: 0;
     padding: 2.5rem 0.875rem 3.75rem;
 
     .header {

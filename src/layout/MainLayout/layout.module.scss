@@ -1,8 +1,5 @@
 .mainLayout {
   margin: 0 auto;
-  width: 1140px;
-
-  @media (max-width: 770px) {
-    width: 320px;
-  }
+  width: 100vw;
+  max-width: 1140px;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "../../ui/Button/Button";
 
 import style from "./main.module.scss";
 
@@ -62,9 +63,7 @@ export const Main: React.FC = () => {
             </div>
           </li>
         </ul>
-        <button className={style.desktop} onClick={() => {}}>
-          Получить консультацию
-        </button>
+        <Button onClick={() => {}}>Получить консультацию</Button>
       </div>
     </main>
   );

@@ -50,6 +50,8 @@
 
   .item {
     margin-left: 1.875rem;
+
+    cursor: pointer;
   }
 
   a {
@@ -81,7 +83,7 @@
   }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 1024px) {
   .header {
     margin: 0;
     padding: 0;

@@ -6,38 +6,53 @@ import { ReactComponent as ViberSvg } from "./../../assets/icons/viber.svg";
 import { ReactComponent as WhatsappSvg } from "./../../assets/icons/whatsapp.svg";
 
 export const Footer: React.FC = () => {
+  const abouts = [
+    {
+      title: "Партнёрская программа",
+    },
+    {
+      title: "Вакансии",
+    },
+  ];
+
+  const menu = [
+    {
+      title: "Расчёт стоимости",
+    },
+    {
+      title: "Услуги",
+    },
+    {
+      title: "Виджеты",
+    },
+    {
+      title: "Интеграции",
+    },
+    {
+      title: "Наши клиенты",
+    },
+  ];
   return (
     <footer className={style.footer}>
       <div>
         <h4>О компании</h4>
         <ul>
-          <li>
-            <a href="#">Партнёрская программа</a>
-          </li>
-          <li>
-            <a href="#">Вакансии</a>
-          </li>
+          {abouts.map((about, i) => (
+            <li key={i}>
+              <a href="#">{about.title}</a>
+            </li>
+          ))}
         </ul>
       </div>
       <div>
         <h4>Меню</h4>
         <div className={style.menu}>
           <ul>
-            <li>
-              <a href="#">Расчёт стоимости</a>
-            </li>
-            <li>
-              <a href="#">Услуги</a>
-            </li>
-            <li>
-              <a href="#">Виджеты</a>
-            </li>
-            <li>
-              <a href="#">Интеграции</a>
-            </li>
-            <li>
-              <a href="#">Наши клиенты</a>
-            </li>
+            {menu.map((item, i) => (
+              <li key={i}>
+                <a href="#">{item.title}</a>
+              </li>
+            ))}
           </ul>
           <ul className={style.flex}>
             <li>

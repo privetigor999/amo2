@@ -1,0 +1,28 @@
+.button {
+  font-size: inherit;
+
+  position: relative;
+  z-index: 5;
+
+  width: 16.375rem;
+  height: 3.875rem;
+
+  color: #e4e5ea;
+  transition: background 0.3s;
+  border: none;
+  background: #4077f3;
+
+  @media (max-width: 770px) {
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    background: rgba(64, 119, 243, 0.7);
+  }
+
+  &:active {
+    transform: translateY(3px);
+  }
+}

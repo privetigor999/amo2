@@ -8,6 +8,24 @@ import { ReactComponent as WhatsappSvg } from "./../../assets/icons/whatsapp.svg
 import style from "./header.module.scss";
 
 export const Header: React.FC = () => {
+  const links = [
+    {
+      title: "Услуги",
+      link: "#",
+    },
+    {
+      title: "Виджеты",
+      link: "#",
+    },
+    {
+      title: "Интеграции",
+      link: "#",
+    },
+    {
+      title: "Кейсы",
+      link: "#",
+    },
+  ];
   return (
     <header className={style.header}>
       <div className={style.left}>
@@ -24,18 +42,11 @@ export const Header: React.FC = () => {
         </div>
         <menu>
           <ul className={style.menu}>
-            <li className={style.item}>
-              <a href="#">Услуги</a>
-            </li>
-            <li className={style.item}>
-              <a href="#">Виджеты</a>
-            </li>
-            <li className={style.item}>
-              <a href="#">Интеграции</a>
-            </li>
-            <li className={style.item}>
-              <a href="#">Кейсы</a>
-            </li>
+            {links.map((link, i) => (
+              <li key={i} className={style.item}>
+                <a href={link.link}>{link.title}</a>
+              </li>
+            ))}
             <li className={`${style.item} ${style.desktop}`}>
               <a href="#">Сертификаты</a>
             </li>
